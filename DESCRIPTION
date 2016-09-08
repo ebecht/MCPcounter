@@ -1,0 +1,11 @@
+Package: MCPcounter
+Type: Package
+Title: Estimating tissue-infiltrating immune and other stromal subpopulations abundances using gene expression
+Version: 1.1.0
+Date: 2016-02-03
+Author: Etienne Becht, Aurelien de Reynies
+Maintainer: Etienne Becht <mcpcounter@gmail.com>
+Description: Estimating tissue-infiltrating immune and other stromal subpopulations abundances using gene expression
+License: GPL-3
+Depends: R (>= 2.6.0), curl
+LazyData: true
