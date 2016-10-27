@@ -4,7 +4,7 @@
 \description{this function produces a matrix with abundance estimates from an expression matrix}
 \usage{MCPcounter.estimate(expression,featuresType=c("affy133P2_probesets","HUGO_symbols","ENTREZ_ID")[1],
 		probesets=read.table(curl("http://raw.githubusercontent.com/ebecht/MCPcounter/master/Signatures/probesets.txt"),sep="\t",stringsAsFactors=FALSE,colClasses="character"),
-		genes=read.table(curl("http://raw.githubusercontent.com/ebecht/MCPcounter/master/Signatures/genes.txt"),sep="\t",stringsAsFactors=FALSE,header=TRUE,colClasses="character")
+		genes=read.table(curl("http://raw.githubusercontent.com/ebecht/MCPcounter/master/Signatures/genes.txt"),sep="\t",stringsAsFactors=FALSE,header=TRUE,colClasses="character",check.names=FALSE)
 )}
 \arguments{
 \item{expression}{matrix or data.frame with features in rows and samples in columns}
