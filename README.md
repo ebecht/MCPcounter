@@ -3,7 +3,7 @@ This repository hosts the source code corresponding to the method described in o
 
 To install it, the easiest is to use the `R` package `devtools` and its function `install_github`. To do so, open an `R` session and enter
 
-    install.packages("devtools","curl") ##Installs devtools and the MCPcounter dependancy 'curl'
+    install.packages(c("devtools","curl")) ##Installs devtools and the MCPcounter dependancy 'curl'
     library(devtools)
     install_github("ebecht/MCPcounter",ref="master", subdir="Source")
     
