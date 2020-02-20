@@ -51,9 +51,9 @@ MCPcounter.estimate=function(
     }
     
     if(featuresType=="HUGO_symbols"){
-        features=subset(markersG,get("HUGO symbols")%in%rownames(expression))
+        features=subset(markersG,get("HUGO_symbols")%in%rownames(expression))
         markers.names = unique(features[, "Cell population"])
-        features=split(features[,"HUGO symbols"],features[,"Cell population"])
+        features=split(features[,"HUGO_symbols"],features[,"Cell population"])
         missing.populations=setdiff(markers.names,names(features))
         features=features[intersect(markers.names,names(features))]
         
