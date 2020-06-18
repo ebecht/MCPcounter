@@ -30,7 +30,7 @@ appendSignatures=function(xp,markers){
 
 MCPcounter.estimate=function(
                              expression,
-                             featuresType=c("affy133P2_probesets","HUGO_symbols","ENTREZ_ID")[1],
+                             featuresType=c("affy133P2_probesets","HUGO_symbols","ENTREZ_ID","ENSEMBL_ID")[1],
                              probesets=read.table(curl:::curl("https://raw.githubusercontent.com/ebecht/MCPcounter/master/Signatures/probesets.txt"),sep="\t",stringsAsFactors=FALSE,colClasses="character"),
                              genes=read.table(curl:::curl("https://raw.githubusercontent.com/ebecht/MCPcounter/master/Signatures/genes.txt"),sep="\t",stringsAsFactors=FALSE,header=TRUE,colClasses="character",check.names=FALSE)
                              ){
@@ -66,6 +66,15 @@ MCPcounter.estimate=function(
         missing.populations=setdiff(markers.names,names(features))
         features=features[intersect(markers.names,names(features))]
     }
+    
+    if(featuresType=="ENSEMBL_ID"){
+        features=subset(markersG,get("ENSEMBL ID")%in%rownames(expression))
+        markers.names = unique(features[, "Cell population"])
+        features=split(features[,"ENSEMBLE ID"],features[,"Cell population"])
+        missing.populations=setdiff(markers.names,names(features))
+        features=features[intersect(markers.names,names(features))]
+    }
+    
     
     if(length(missing.populations)>0){
         warning(paste("Found no markers for population(s):",paste(missing.populations,collapse=", ")))
