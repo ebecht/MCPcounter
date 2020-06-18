@@ -20,7 +20,7 @@ appendSignatures=function(xp,markers){
 ## description >> this function produces a matrix with abundance estimates from an expression matrix
 ## argument
 ## item >> expression >> matrix or data.frame with features in rows and samples in columns
-## item >> featuresType >> type of identifiers for expression features. Defaults to "affy133P2_probesets" for Affymetrix Human Genome 133 Plus 2.0 probesets. Other options are "HUGO_symbols" (Official gene symbols) or "ENTREZ_ID" (Entrez Gene ID)
+## item >> featuresType >> type of identifiers for expression features. Defaults to "affy133P2_probesets" for Affymetrix Human Genome 133 Plus 2.0 probesets. Other options are "HUGO_symbols" (Official gene symbols), "ENTREZ_ID" (Entrez Gene ID) or "ENSEMBL_ID" (ENSEMBL Gene ID)
 ## value >> matrix with cell populations in rows and samples in columns
 ## author >> Etienne Becht
 ## keyword >> methods

@@ -3,10 +3,10 @@ Type: Package
 Title: Estimating tissue-infiltrating immune and other stromal subpopulations abundances using gene expression
 Version: 1.2.0
 Date: 2020-02-14
-Author: Etienne Becht, Aurelien de Reynies
+Author: Etienne Becht, Aurelien de Reynies, Florent Petitprez
 Maintainer: Etienne Becht <mcpcounter@gmail.com>
 Description: Estimating tissue-infiltrating immune and other stromal subpopulations abundances using gene expression
 License: GPL-3
 Depends: R (>= 2.6.0), curl
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
