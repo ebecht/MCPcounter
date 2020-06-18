@@ -70,7 +70,7 @@ MCPcounter.estimate=function(
     if(featuresType=="ENSEMBL_ID"){
         features=subset(markersG,get("ENSEMBL ID")%in%rownames(expression))
         markers.names = unique(features[, "Cell population"])
-        features=split(features[,"ENSEMBLE ID"],features[,"Cell population"])
+        features=split(features[,"ENSEMBL ID"],features[,"Cell population"])
         missing.populations=setdiff(markers.names,names(features))
         features=features[intersect(markers.names,names(features))]
     }
