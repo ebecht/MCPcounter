@@ -3,14 +3,14 @@
 \title{MCPcounter.estimate}
 \description{this function produces a matrix with abundance estimates from an expression matrix}
 \usage{MCPcounter.estimate(expression,featuresType=c("affy133P2_probesets","HUGO_symbols","ENTREZ_ID","ENSEMBL_ID")[1],
-		probesets=read.table(curl("http://raw.githubusercontent.com/ebecht/MCPcounter/master/Signatures/probesets.txt"),sep="\t",stringsAsFactors=FALSE,colClasses="character"),
-		genes=read.table(curl("http://raw.githubusercontent.com/ebecht/MCPcounter/master/Signatures/genes.txt"),sep="\t",stringsAsFactors=FALSE,header=TRUE,colClasses="character",check.names=FALSE)
+		probesets=read.table(system.file("extdata", "probesets.txt", package="MCPcounter"),sep="\t",stringsAsFactors=FALSE,colClasses="character"),
+		genes=read.table(system.file("extdata", "genes.txt", package="MCPcounter"),sep="\t",stringsAsFactors=FALSE,header=TRUE,colClasses="character",check.names=FALSE)
 )}
 \arguments{
 \item{expression}{matrix or data.frame with features in rows and samples in columns}
 \item{featuresType}{type of identifiers for expression features. Defaults to "affy133P2_probesets" for Affymetrix Human Genome 133 Plus 2.0 probesets. Other options are "HUGO_symbols" (Official gene symbols), "ENTREZ_ID" (Entrez Gene ID)or "ENSEMBL_ID" (ENSEMBL Gene ID)}
-\item{probesets}{Data frame of probesets transcriptomic markers and corresponding cell populations. Fetched from github by a call to read.table by default, but can also be a data.frame}
-\item{genes}{Data frame of genes transcriptomic markers (HUGO symbols or ENTREZ_ID) and corresponding cell populations. Fetched from github by a call to read.table by default, but can also be a data.frame}
+\item{probesets}{Data frame of probesets transcriptomic markers and corresponding cell populations.}
+\item{genes}{Data frame of genes transcriptomic markers (HUGO symbols or ENTREZ_ID) and corresponding cell populations.}
 }
 \value{matrix with cell populations in rows and samples in columns
 }
